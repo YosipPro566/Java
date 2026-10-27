@@ -1,61 +1,23 @@
-#  2 — Java
+#  3 — Java
 
-ей проект містить виконання другої лабораторної роботи на Java.
+ей проект містить виконання третьої лабораторної роботи на Java.
 
 ## пис задачі
 
-рограма:
-- запитує кількість тварин;
-- збирає дані про кожну тварину;
-- записує їх у масив об'єктів `Pet`;
-- виводить весь список;
-- сортує тварин за вагою за допомогою методу Bubble Sort.
+отрібно реалізувати перевірку введених даних для об'єкта тварини:
+- ім'я не може бути порожнім;
+- вага має бути більше нуля;
+- при некоректному введенні даних використовуються власні винятки.
 
-## Структура проекту
+## сновні класи
 
-```text
-PetProject/
-+-- .gitignore
-+-- README.md
-+-- src/
-¦   +-- lr1/
-¦   ¦   +-- Pet.java
-¦   ¦   L-- MainLR1.java
-¦   L-- lr2/
-¦       L-- MainLR2.java
-L-- out/
-```
+- `InvalidPetDataException` — користувацький виняток для неправильних даних.
+- `ValidatedPet` — клас, який перевіряє параметри об'єкта.
+- `MainLR3` — головний клас для введення даних та обробки винятків.
 
 ## Як запустити
 
 ```bash
-javac -d out src/lr1/*.java src/lr2/*.java
-java -cp out lr2.MainLR2
-```
-
-## риклад вводу
-
-```text
-3
-Max
-Dog
-3
-12.5
-Luna
-Cat
-2
-4.0
-Rex
-Dog
-5
-20.0
-```
-
-## риклад виведення
-
-```text
---- Sorted Pets by Weight (Bubble Sort) ---
-Pet[Name: Luna, Species: Cat, Age: 2 y.o., Weight: 4,00 kg]
-Pet[Name: Max, Species: Dog, Age: 3 y.o., Weight: 12,50 kg]
-Pet[Name: Rex, Species: Dog, Age: 5 y.o., Weight: 20,00 kg]
+javac -d out src/lr1/*.java src/lr2/*.java src/lr3/*.java
+java -cp out lr3.MainLR3
 ```
